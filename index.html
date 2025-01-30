@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-03</title>
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <style>
+        .adlam-display {
+            font-family: "ADLaM Display", serif;
+        }
+
+        .sora {
+            font-family: "Sora", serif;
+        }
+    </style>
+
+    <!-- tailwind and daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom style  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'btn-bg-color': '#FFDC26',
+                        'card-bg-color': '#F9DF8A',
+                        'footer-bg-color': '#FFDC2680'
+
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="">
+    <!-- header section  -->
+    <header class="md:container mx-auto">
+        <!-- navbar section  -->
+
+        <nav class="navbar bg-base-100 flex mx-auto w-full justify-between lg:justify-around items-center sora">
+            <div class="flex gap-3"><img src="images/logo-header.png" alt="">
+                <h1 class=" hidden md:block text-3xl font-bold ">Browse4Pets</h1>
+            </div>
+            <div class="">
+                <ul class="hidden lg:flex justify-center items-center gap-6 font-semibold ">
+                    <li><a href="">Find a pet</a></li>
+                    <li><a href="">Breeds</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="flex items-end relative">
+                <div class="hidden lg:flex justify-center items-center gap-4">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button class="btn border-btn-bg-color">Login</button>
+                    <button class="btn bg-btn-bg-color">Register</button>
+                </div>
+                <div class="dropdown lg:hidden">
+                    <div>
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- hero section  -->
+        <section class="">
+            <div class="hero  flex box-border w-full h-screen p-5 bg-right md:bg-center bg-cover bg-no-repeat"
+                style="background-image: url(images/cat-big.png);">
+                <!-- text area  -->
+                <div class="md:w-2/3 flex flex-col gap-5">
+                    <h1 class="adlam-display text-5xl">
+                        Pamper Your Pet, Because They Deserve the Bes
+                    </h1>
+                    <p class="sora text-gray-500">Discover a world of treats, toys, and essentials handpicked for your
+                        furry friends. Shop now and make tails wag with joy!</p>
+                    <button class="btn bg-btn-bg-color sora w-44">Find a pet</button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- main section  -->
+    <main class="container mx-auto sora">
+        <section class="my-20">
+            <div class="carousel w-full">
+                <!-- slide 1  -->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="md:flex items-center justify-between mx-auto">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="adlam-display text-5xl">Tabby cat</h1>
+                            <p>
+                                It's a tabby cat, meaning it has a striped coat pattern. Tabbies aren't a specific
+                                breed, but rather a coat variation found in many breeds and mixed-breed cats.
+                            </p>
+                            <button
+                                class="btn bg-btn-bg-color text-white font-bold text-xl box-border w-fit">Purchase</button>
+                        </div>
+                        <div>
+                            <img src="images/mycat1.webp" class="w-full" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle text-black bg-[#E5E7EBA6]">❮</a>
+                        <a href="#slide2" class="btn btn-circle text-black bg-[#E5E7EBA6]">❯</a>
+                    </div>
+                </div>
+                <!-- slide 2  -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="md:flex items-center justify-between mx-auto">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="adlam-display text-5xl">Abyssinian cat</h1>
+                            <p>
+                                This is a beautiful Abyssinian cat with a classic ruddy coat. Ruddy (also known as usual
+                                or agouti) - characterized by warm brown tones with darker ticking.
+                            </p>
+                            <button
+                                class="btn bg-btn-bg-color text-white font-bold text-xl box-border w-fit">Purchase</button>
+                        </div>
+                        <div>
+                            <img src="images/mycat2.png" class="w-full" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle text-black bg-[#E5E7EBA6]">❮</a>
+                        <a href="#slide3" class="btn btn-circle text-black bg-[#E5E7EBA6]">❯</a>
+                    </div>
+                </div>
+                <!-- slide 1  -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="md:flex items-center justify-between mx-auto">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="adlam-display text-5xl">British Longhair</h1>
+                            <p>
+                                This is a beautiful representation of a British Longhair, showcasing the breed's
+                                characteristic plush coat and charming features. The cat looks healthy and well-groomed,
+                                with a calm and friendly demeanor.
+                            </p>
+                            <button
+                                class="btn bg-btn-bg-color text-white font-bold text-xl box-border w-fit">Purchase</button>
+                        </div>
+                        <div>
+                            <img src="images/mycat3.webp" class="w-full" />
+                        </div>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle text-black bg-[#E5E7EBA6]">❮</a>
+                        <a href="#slide1" class="btn btn-circle text-black bg-[#E5E7EBA6]">❯</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
